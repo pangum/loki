@@ -15,7 +15,7 @@ type Creator struct {
 
 func (c *Creator) New(config *pangu.Config, http *http.Client) (logger simaqian.Logger, err error) {
 	wrapper := new(Wrapper)
-	if le := config.Load(wrapper); nil != le {
+	if le := config.Build().Get(wrapper); nil != le {
 		err = le
 	} else {
 		logger, err = c.new(&wrapper.Logging, http)
