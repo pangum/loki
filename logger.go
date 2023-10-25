@@ -1,8 +1,8 @@
 package loki
 
 import (
-	"github.com/goexl/simaqian"
+	"github.com/goexl/log"
 )
 
 // Logger 方便调用引用时
-type Logger = simaqian.Logger
+type Logger = log.Logger
