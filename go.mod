@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/goexl/exc v0.0.5
 	github.com/goexl/gox v0.3.8
-	github.com/goexl/http v0.0.8
+	github.com/goexl/http v0.1.0
 	github.com/goexl/log v0.0.5
 	github.com/goexl/loki v0.0.4
 	github.com/pangum/pangu v0.3.9
