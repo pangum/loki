@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	"github.com/goexl/exc"
+	"github.com/goexl/exception"
 	"github.com/goexl/gox/field"
 	"github.com/goexl/http"
 	"github.com/goexl/log"
@@ -47,7 +47,7 @@ func (c *Creator) new(config *Config, http *http.Client) (logger log.Logger, err
 		}
 		logger, err = builder.Factory(factory.Build()).Build()
 	default:
-		err = exc.NewField("不支持的日志收集器", field.New("type", config.Type))
+		err = exception.New().Message("不支持的日志收集器").Field(field.New("type", config.Type)).Build()
 	}
 
 	return
