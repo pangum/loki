@@ -11,4 +11,6 @@ type Loki struct {
 	Username string `json:"username" yaml:"username" xml:"username" toml:"username" validate:"required_with=Password"`
 	// 密码
 	Password string `json:"password" yaml:"password" xml:"password" toml:"password" validate:"required_with=Username"`
+	// 租户
+	Tenant string `json:"tenant,omitempty" yaml:"tenant" xml:"tenant" toml:"tenant"`
 }

@@ -45,6 +45,9 @@ func (c *Creator) new(config *Config, http *http.Client) (logger log.Logger, err
 		if 0 != len(self.Labels) {
 			factory.Labels(self.Labels)
 		}
+		if "" != self.Tenant {
+			factory.Tenant(self.Tenant)
+		}
 		logger, err = builder.Factory(factory.Build()).Build()
 	default:
 		err = exception.New().Message("不支持的日志收集器").Field(field.New("type", config.Type)).Build()
