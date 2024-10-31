@@ -6,9 +6,9 @@ import (
 )
 
 func init() {
-	ctor := new(plugin.Constructor)
-	pangu.New().Get().Dependency().Puts(
-		ctor.LoadConfig,
-		ctor.New,
-	).Build().Apply()
+	pangu.New().Get().Dependency().Put(
+		plugin.LoadConfig,
+	).Build().Put(
+		plugin.New,
+	).Name("pangum.loki").Build().Build().Apply()
 }
