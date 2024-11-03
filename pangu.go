@@ -10,5 +10,5 @@ func init() {
 		plugin.LoadConfig,
 	).Build().Put(
 		plugin.New,
-	).Name("pangum.loki").Build().Build().Apply()
+	).Name("logger.pangum.loki").Build().Build().Apply()
 }

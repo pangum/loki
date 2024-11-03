@@ -8,7 +8,7 @@ require (
 	github.com/goexl/http v0.2.0
 	github.com/goexl/log v0.0.7
 	github.com/goexl/loki v0.1.0
-	github.com/pangum/pangu v1.4.9
+	github.com/pangum/pangu v1.5.2
 )
 
 require (
@@ -47,3 +47,5 @@ require (
 	golang.org/x/sys v0.26.0 // indirect
 	golang.org/x/text v0.19.0 // indirect
 )
+
+replace github.com/pangum/pangu => ../pangu
